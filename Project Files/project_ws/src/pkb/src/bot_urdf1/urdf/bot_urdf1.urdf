@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot
+  name="bot_urdf1">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00433150706637454 5.25676335550678E-10 -0.0550104892986802"
+        rpy="0 0 0" />
+      <mass
+        value="20.4013433607069" />
+      <inertia
+        ixx="4.19722874986969"
+        ixy="-4.8090685850497E-08"
+        ixz="-4.28726068214046E-07"
+        iyy="4.1979926323273"
+        iyz="1.31162256266258E-10"
+        izz="8.29717338418445" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bot_urdf1/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.964705882352941 0.964705882352941 0.952941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bot_urdf1/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="wheel_fr">
+    <inertial>
+      <origin
+        xyz="0 0.105 0"
+        rpy="0 0 0" />
+      <mass
+        value="21.5957465658845" />
+      <inertia
+        ixx="0.457618555212858"
+        ixy="2.71050543121376E-18"
+        ixz="-3.06421248350205E-33"
+        iyy="0.836926309894771"
+        iyz="1.29564750378012E-17"
+        izz="0.457618555212858" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bot_urdf1/meshes/wheel_fr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.152941176470588 0.152941176470588 0.152941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bot_urdf1/meshes/wheel_fr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_fr_rev"
+    type="continuous">
+    <origin
+      xyz="0.5992 -1.0246 -0.3492"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_fr" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="3.14"
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="wheel_fl">
+    <inertial>
+      <origin
+        xyz="0 -0.105 0"
+        rpy="0 0 0" />
+      <mass
+        value="21.5957465658845" />
+      <inertia
+        ixx="0.457618555212858"
+        ixy="4.13978999230504E-33"
+        ixz="-4.59267919023056E-34"
+        iyy="0.836926309894771"
+        iyz="5.39510320249087E-20"
+        izz="0.457618555212858" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bot_urdf1/meshes/wheel_fl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.152941176470588 0.152941176470588 0.152941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bot_urdf1/meshes/wheel_fl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_fl_rev"
+    type="continuous">
+    <origin
+      xyz="0.5992 1.0246 -0.3492"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_fl" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="3.14"
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="wheel_rr">
+    <inertial>
+      <origin
+        xyz="0 0.105 0"
+        rpy="0 0 0" />
+      <mass
+        value="21.5957465658845" />
+      <inertia
+        ixx="0.457618555212858"
+        ixy="4.18444103998784E-33"
+        ixz="4.59267919023056E-34"
+        iyy="0.836926309894771"
+        iyz="-5.39510320249087E-20"
+        izz="0.457618555212858" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bot_urdf1/meshes/wheel_rr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.152941176470588 0.152941176470588 0.152941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bot_urdf1/meshes/wheel_rr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_rr_rev"
+    type="continuous">
+    <origin
+      xyz="-0.5992 -1.0246 -0.3492"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_rr" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="3.14"
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="wheel_rl">
+    <inertial>
+      <origin
+        xyz="0 -0.105 0"
+        rpy="0 0 0" />
+      <mass
+        value="21.5957465658845" />
+      <inertia
+        ixx="0.457618555212858"
+        ixy="2.71050543121376E-18"
+        ixz="3.06421248350205E-33"
+        iyy="0.836926309894771"
+        iyz="-1.29564750378012E-17"
+        izz="0.457618555212858" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bot_urdf1/meshes/wheel_rl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.152941176470588 0.152941176470588 0.152941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bot_urdf1/meshes/wheel_rl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_rl_rev"
+    type="continuous">
+    <origin
+      xyz="-0.5992 1.0246 -0.3492"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_rl" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="3.14"
+      effort="100"
+      velocity="100" />
+  </joint>
+
+<link name="camera">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy=" 0 0 0" xyz="0.0 0 0.6"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
+    </inertial>
+    <collision name="camera_collision">
+      <origin rpy=" 0 0 0" xyz="0 0 0.05"/>
+      <geometry>
+        <box size=".05 .05 .05"/>
+      </geometry>
+    </collision>
+    <visual name="camera_visual">
+      <origin rpy=" 0 0 0" xyz="0 0 0.05"/>
+      <geometry>
+        <box size=".05 .05 .05"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="camera_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0.85 0 0.05"/>
+    <child link="camera"/>
+    <parent link="base_link"/>
+    <axis rpy="0 0 0" xyz="0 1 0"/>
+    <limit effort="10000" velocity="1000"/>
+    <joint_properties damping="1.0" friction="1.0"/>
+  </joint>
+
+
+  <gazebo>
+    <plugin name="diffdrive_plugin_multiwheel" filename="libdiffdrive_plugin_multi_wheel.so">
+      <alwaysOn>true</alwaysOn>
+      <robotNamespace>/</robotNamespace>
+      <leftJoints>wheel_fl_rev wheel_rl_rev</leftJoints>
+      <rightJoints>wheel_fr_rev wheel_rr_rev</rightJoints>
+      <wheelSeparation>1.6</wheelSeparation>
+      <wheelDiameter>0.5</wheelDiameter>
+      <torque>60</torque>
+      <commandTopic>/cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <robotBaseFrame>base_link</robotBaseFrame>
+      <updateRate>20.0</updateRate>
+      <publishOdometryTf>true</publishOdometryTf>
+      <publishOdometryMsg>true</publishOdometryMsg>
+    </plugin>
+    </gazebo>
+    
+    
+    
+    
+    
+    <gazebo reference="camera">
+    <material>Gazebo/Green</material>
+    <sensor name="camera1" type="camera">
+      <update_rate>30.0</update_rate>
+      <camera name="head">
+        <horizontal_fov>1.3962634</horizontal_fov>
+        <image>
+          <width>800</width>
+          <height>800</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.02</near>
+          <far>300</far>
+        </clip>
+      </camera>
+      <plugin filename="libgazebo_ros_camera.so" name="camera_controller">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>0.0</updateRate>
+        <cameraName>bot_urdf1/camera1</cameraName>
+        <imageTopicName>image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>camera</frameName>
+        <hackBaseline>0.07</hackBaseline>
+        <distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+      </plugin>
+    </sensor>
+  </gazebo>
+  
+</robot>

@@ -1,0 +1,8 @@
+prefix=/home/dhruvil/project_ws/devel
+
+Name: bot_urdf1
+Description: Description of bot_urdf1
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

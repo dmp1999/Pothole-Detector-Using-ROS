@@ -1,0 +1,13 @@
+four_wheel_bot:
+     joint_state_controller:
+          type: joint_state_controller/JointStateController
+          publish_rate: 20
+
+     r_con_position_controller:
+          type: effort_controllers/JointGroupEffortController
+          joints: ['wheel_rr_rev', 'wheel_fr_rev']
+       
+          
+     l_con_position_controller:
+          type: effort_controllers/JointGroupEffortController
+          joints: ['wheel_rl_rev', 'wheel_fl_rev']

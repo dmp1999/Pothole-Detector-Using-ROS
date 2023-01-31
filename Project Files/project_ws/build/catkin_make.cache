@@ -1,0 +1,2 @@
+pkb/src/bot_urdf1:pkb/src/hector_gazebo/hector_gazebo:pkb/src/hector_gazebo/hector_gazebo_plugins:pkb/src/hector_gazebo/hector_gazebo_thermal_camera:pkb/src/hector_gazebo/hector_gazebo_worlds:pkb/src/hector_gazebo/hector_sensors_gazebo
+-DCATKIN_DEVEL_PREFIX=/home/dhruvil/project_ws/devel -DCMAKE_INSTALL_PREFIX=/home/dhruvil/project_ws/install -G Unix Makefiles
